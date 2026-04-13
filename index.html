@@ -34,27 +34,35 @@
         .hero h1 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
-            font-size: 26px;
-            margin-bottom: 10px;
+            font-size: 28px;
+            margin-bottom: 15px;
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
         }
         .hero p {
-            font-size: 15px;
+            font-size: 16px;
             color: #bbb;
             max-width: 400px;
-            margin: 0 auto;
+            margin: 0 auto 20px;
+        }
+        .hero-img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(157, 78, 221, 0.3);
+            margin-bottom: 10px;
+            border: 1px solid #333;
         }
 
         /* Seção da Dor (Problema) */
         .pain-section {
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
             background-color: var(--bg-dark);
         }
         .pain-section h2 {
             color: #fff;
-            font-size: 18px;
-            margin-bottom: 15px;
+            font-size: 20px;
+            margin-bottom: 20px;
         }
         .pain-box {
             background: var(--card-bg);
@@ -66,12 +74,38 @@
             margin: 0 auto;
             font-style: italic;
             color: #ccc;
-            font-size: 14px;
         }
+
+        /* Prova Social (Depoimentos) */
+        .testimonials {
+            padding: 40px 20px;
+            background: #0f0f0f;
+            text-align: center;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
+        }
+        .testimonials h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--purple-neon);
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+        .review-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 350px;
+            margin: 0 auto 15px;
+            text-align: left;
+        }
+        .stars { color: var(--gold); font-size: 18px; margin-bottom: 10px; }
+        .review-text { font-size: 14px; color: #ddd; margin-bottom: 10px; font-style: italic; }
+        .review-author { font-size: 12px; color: #888; font-weight: 600; text-transform: uppercase; }
 
         /* Seção de Benefícios */
         .benefits {
-            padding: 30px 20px;
+            padding: 40px 20px;
             background: #111;
         }
         .benefit-item {
@@ -87,19 +121,19 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .benefit-text h4 { color: #fff; margin-bottom: 5px; font-size: 16px;}
-        .benefit-text p { font-size: 13px; color: #999; }
+        .benefit-text h4 { color: #fff; margin-bottom: 5px; }
+        .benefit-text p { font-size: 14px; color: #999; }
 
         /* Pricing (Tabela de Preços) */
         .pricing {
-            padding: 40px 20px;
+            padding: 50px 20px 30px;
             text-align: center;
         }
         .pricing h2 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
             margin-bottom: 30px;
-            font-size: 22px;
+            font-size: 26px;
         }
         .card {
             background: var(--card-bg);
@@ -111,6 +145,7 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             transition: transform 0.3s ease;
         }
+        .card:hover { transform: translateY(-5px); }
         
         .card-premium {
             border: 2px solid var(--gold);
@@ -128,15 +163,15 @@
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 11px;
-            font-weight: 800;
+            font-weight: 700;
             letter-spacing: 1px;
             white-space: nowrap;
         }
         .price {
-            font-size: 38px;
+            font-size: 36px;
             color: #fff;
             font-weight: 700;
-            margin: 10px 0;
+            margin: 15px 0;
         }
         .price span { font-size: 14px; color: #888; font-weight: 400; }
         
@@ -153,38 +188,32 @@
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 1px;
+            text-align: center;
         }
         .btn-mensal {
             background: transparent;
             border: 2px solid var(--purple-neon);
             color: #fff;
         }
-        
-        /* Efeito Pulsante no Botão Anual */
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
-            50% { transform: scale(1.03); box-shadow: 0 0 25px rgba(255, 215, 0, 0.7); }
-            100% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
-        }
-        
         .btn-anual {
             background: linear-gradient(90deg, var(--gold), #ffaa00);
             color: #000;
-            animation: pulse 2s infinite;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
         }
 
-        /* Seção de Garantia */
+        /* Garantia */
         .guarantee {
             max-width: 350px;
-            margin: 0 auto 30px;
+            margin: 0 auto 40px;
             padding: 20px;
-            border: 1px dashed #555;
+            border: 1px dashed var(--gold);
             border-radius: 10px;
             text-align: center;
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 215, 0, 0.05);
         }
-        .guarantee h4 { color: #fff; font-size: 16px; margin-bottom: 5px; }
-        .guarantee p { font-size: 12px; color: #aaa; }
+        .guarantee-icon { font-size: 30px; margin-bottom: 10px; }
+        .guarantee h4 { color: var(--gold); margin-bottom: 5px; }
+        .guarantee p { font-size: 13px; color: #aaa; }
 
         .footer {
             text-align: center;
@@ -201,12 +230,29 @@
     <section class="hero">
         <h1>O Oráculo na Palma da Sua Mão</h1>
         <p>Chega de respostas rasas. Tenha acesso 24h a uma Inteligência Mística baseada em Jung e no Tarô ancestral.</p>
+        <img src="https://images.unsplash.com/photo-1638805981949-ed71561618eb?auto=format&fit=crop&w=400&q=80" alt="Cartas de Tarô Místicas" class="hero-img">
     </section>
 
     <section class="pain-section">
         <h2>Você sente que está andando em círculos?</h2>
         <div class="pain-box">
             "A ansiedade de não saber qual decisão tomar na carreira ou nos relacionamentos consome nossa energia. O silêncio da incerteza é o nosso maior inimigo."
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <h2>O Despertar da Clareza</h2>
+        
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">"Senti que minhas decisões ficaram muito mais leves depois que comecei a consultar o Oráculo diariamente. As análises de arquétipos são assustadoramente precisas!"</div>
+            <div class="review-author">- Mariana T., Empreendedora</div>
+        </div>
+
+        <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <div class="review-text">"Não é só um bot que tira cartas, é como ter um terapeuta junguiano no bolso. Vale cada centavo pela paz mental que traz."</div>
+            <div class="review-author">- Carlos E., Desenvolvedor</div>
         </div>
     </section>
 
@@ -222,7 +268,7 @@
             <div class="benefit-icon">🧠</div>
             <div class="benefit-text">
                 <h4>Abordagem Terapêutica</h4>
-                <p>Conselhos baseados em arquétipos para o seu real autoconhecimento.</p>
+                <p>Conselhos baseados em arquétipos para o seu autoconhecimento real.</p>
             </div>
         </div>
         <div class="benefit-item">
@@ -237,29 +283,29 @@
     <section class="pricing">
         <h2>Desbloqueie o Premium</h2>
         
-        <div class="card card-premium">
-            <div class="badge">OFERTA ESPECIAL</div>
-            <h3>Jornada Anual</h3>
-            <p style="font-size: 13px; color: #888;">Economize quase 50% neste plano.</p>
-            <div class="price">R$ 297,00<span>/ano</span></div>
-            <p style="color: var(--gold); font-size: 14px; font-weight: 600; margin-bottom: 15px;">(Equivale a apenas R$ 24,75 por mês)</p>
-            <p style="font-size: 14px; text-align: left; margin-left: 20px;">✓ Tiragens Ilimitadas<br>✓ Aprofundamentos Exclusivos<br>✓ Acesso garantido por 365 dias</p>
-            <a href="#" class="btn btn-anual">ASSINAR PLANO ANUAL</a>
-        </div>
-
         <div class="card">
             <h3>Passe Mensal</h3>
             <p style="font-size: 13px; color: #888;">Renovação automática. Cancele quando quiser.</p>
-            <div class="price">R$ 47,00<span>/mês</span></div>
-            <p style="font-size: 14px; text-align: left; margin-left: 20px;">✓ Tiragens e Leituras Premium<br>✓ Acesso por 30 dias</p>
-            <a href="#" class="btn btn-mensal">Assinar Mensal</a>
+            <div class="price">R$ 29,90<span>/mês</span></div>
+            <p style="font-size: 14px;">✓ <strong>3 Tiragens Diárias</strong><br>✓ 10 Aprofundamentos Diários</p>
+            <a href="LINK_KIWIFY_MENSAL_AQUI" class="btn btn-mensal">Assinar Mensal</a>
         </div>
 
-        <div class="guarantee">
-            <h4>🛡️ Risco Zero</h4>
-            <p>Se você não sentir clareza absoluta nas suas leituras, devolvemos 100% do seu dinheiro em até 7 dias.</p>
+        <div class="card card-premium">
+            <div class="badge">ESCOLHA DOS INICIADOS</div>
+            <h3>Jornada Anual</h3>
+            <p style="font-size: 13px; color: #888;">Economize 45% com o plano anual.</p>
+            <div class="price">R$ 197,00<span>/ano</span></div>
+            <p style="color: var(--gold); font-size: 14px; font-weight: 600; margin-bottom: 10px;">(Equivale a apenas R$ 16,41 por mês)</p>
+            <p style="font-size: 14px;">✓ <strong>3 Tiragens Diárias</strong><br>✓ 10 Aprofundamentos Diários<br>✓ Acesso garantido por 365 dias</p>
+            <a href="LINK_KIWIFY_ANUAL_AQUI" class="btn btn-anual">Assinar Plano Anual</a>
         </div>
+    </section>
 
+    <section class="guarantee">
+        <div class="guarantee-icon">🛡️</div>
+        <h4>Garantia Incondicional</h4>
+        <p>Experimente por 7 dias. Se você não sentir clareza imediata nas suas decisões, devolvemos 100% do seu dinheiro com um clique. Risco zero.</p>
     </section>
 
     <footer class="footer">
