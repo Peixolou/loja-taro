@@ -26,7 +26,7 @@
 
         /* Hero Section (Topo) */
         .hero {
-            padding: 50px 20px 40px;
+            padding: 40px 20px 30px;
             text-align: center;
             background: radial-gradient(circle at center, #1a0b2e 0%, var(--bg-dark) 80%);
             border-bottom: 1px solid #222;
@@ -34,12 +34,12 @@
         .hero h1 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 26px;
+            margin-bottom: 10px;
             text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
         }
         .hero p {
-            font-size: 16px;
+            font-size: 15px;
             color: #bbb;
             max-width: 400px;
             margin: 0 auto;
@@ -47,14 +47,14 @@
 
         /* Seção da Dor (Problema) */
         .pain-section {
-            padding: 40px 20px;
+            padding: 30px 20px;
             text-align: center;
             background-color: var(--bg-dark);
         }
         .pain-section h2 {
             color: #fff;
-            font-size: 20px;
-            margin-bottom: 20px;
+            font-size: 18px;
+            margin-bottom: 15px;
         }
         .pain-box {
             background: var(--card-bg);
@@ -66,11 +66,12 @@
             margin: 0 auto;
             font-style: italic;
             color: #ccc;
+            font-size: 14px;
         }
 
         /* Seção de Benefícios */
         .benefits {
-            padding: 40px 20px;
+            padding: 30px 20px;
             background: #111;
         }
         .benefit-item {
@@ -86,19 +87,19 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .benefit-text h4 { color: #fff; margin-bottom: 5px; }
-        .benefit-text p { font-size: 14px; color: #999; }
+        .benefit-text h4 { color: #fff; margin-bottom: 5px; font-size: 16px;}
+        .benefit-text p { font-size: 13px; color: #999; }
 
         /* Pricing (Tabela de Preços) */
         .pricing {
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
         }
         .pricing h2 {
             font-family: 'Cinzel', serif;
             color: var(--gold);
             margin-bottom: 30px;
-            font-size: 24px;
+            font-size: 22px;
         }
         .card {
             background: var(--card-bg);
@@ -110,7 +111,6 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
             transition: transform 0.3s ease;
         }
-        .card:hover { transform: translateY(-5px); }
         
         .card-premium {
             border: 2px solid var(--gold);
@@ -128,14 +128,15 @@
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 11px;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
         .price {
-            font-size: 36px;
+            font-size: 38px;
             color: #fff;
             font-weight: 700;
-            margin: 15px 0;
+            margin: 10px 0;
         }
         .price span { font-size: 14px; color: #888; font-weight: 400; }
         
@@ -158,11 +159,32 @@
             border: 2px solid var(--purple-neon);
             color: #fff;
         }
+        
+        /* Efeito Pulsante no Botão Anual */
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 0 25px rgba(255, 215, 0, 0.7); }
+            100% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+        }
+        
         .btn-anual {
             background: linear-gradient(90deg, var(--gold), #ffaa00);
             color: #000;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+            animation: pulse 2s infinite;
         }
+
+        /* Seção de Garantia */
+        .guarantee {
+            max-width: 350px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            border: 1px dashed #555;
+            border-radius: 10px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+        }
+        .guarantee h4 { color: #fff; font-size: 16px; margin-bottom: 5px; }
+        .guarantee p { font-size: 12px; color: #aaa; }
 
         .footer {
             text-align: center;
@@ -200,7 +222,7 @@
             <div class="benefit-icon">🧠</div>
             <div class="benefit-text">
                 <h4>Abordagem Terapêutica</h4>
-                <p>Conselhos baseados em arquétipos para o seu autoconhecimento real.</p>
+                <p>Conselhos baseados em arquétipos para o seu real autoconhecimento.</p>
             </div>
         </div>
         <div class="benefit-item">
@@ -215,23 +237,29 @@
     <section class="pricing">
         <h2>Desbloqueie o Premium</h2>
         
+        <div class="card card-premium">
+            <div class="badge">OFERTA ESPECIAL</div>
+            <h3>Jornada Anual</h3>
+            <p style="font-size: 13px; color: #888;">Economize quase 50% neste plano.</p>
+            <div class="price">R$ 297,00<span>/ano</span></div>
+            <p style="color: var(--gold); font-size: 14px; font-weight: 600; margin-bottom: 15px;">(Equivale a apenas R$ 24,75 por mês)</p>
+            <p style="font-size: 14px; text-align: left; margin-left: 20px;">✓ Tiragens Ilimitadas<br>✓ Aprofundamentos Exclusivos<br>✓ Acesso garantido por 365 dias</p>
+            <a href="#" class="btn btn-anual">ASSINAR PLANO ANUAL</a>
+        </div>
+
         <div class="card">
             <h3>Passe Mensal</h3>
             <p style="font-size: 13px; color: #888;">Renovação automática. Cancele quando quiser.</p>
-            <div class="price">R$ 29,90<span>/mês</span></div>
-            <p style="font-size: 14px;">✓ 3 Tiragens Diárias<br>✓ 10 Aprofundamentos Diários</p>
+            <div class="price">R$ 47,00<span>/mês</span></div>
+            <p style="font-size: 14px; text-align: left; margin-left: 20px;">✓ Tiragens e Leituras Premium<br>✓ Acesso por 30 dias</p>
             <a href="#" class="btn btn-mensal">Assinar Mensal</a>
         </div>
 
-        <div class="card card-premium">
-            <div class="badge">ESCOLHA DOS INICIADOS</div>
-            <h3>Jornada Anual</h3>
-            <p style="font-size: 13px; color: #888;">Economize 45% com o plano anual.</p>
-            <div class="price">R$ 197,00<span>/ano</span></div>
-            <p style="color: var(--gold); font-size: 14px; font-weight: 600; margin-bottom: 10px;">(Equivale a apenas R$ 16,41 por mês)</p>
-            <p style="font-size: 14px;">✓ Tiragens e Aprofundamentos<br>✓ Acesso garantido por 365 dias</p>
-            <a href="#" class="btn btn-anual">Assinar Plano Anual</a>
+        <div class="guarantee">
+            <h4>🛡️ Risco Zero</h4>
+            <p>Se você não sentir clareza absoluta nas suas leituras, devolvemos 100% do seu dinheiro em até 7 dias.</p>
         </div>
+
     </section>
 
     <footer class="footer">
