@@ -4,92 +4,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mestre de Tarô Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --bg-dark: #0a0a0a;
+            --purple-neon: #9d4edd;
+            --gold: #FFD700;
+            --text-light: #e0e0e0;
+            --card-bg: #141414;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            background-color: #0f0f0f;
-            color: #e0e0e0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
             font-family: 'Montserrat', sans-serif;
-            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section (Topo) */
+        .hero {
+            padding: 50px 20px 40px;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a0b2e 0%, var(--bg-dark) 80%);
+            border-bottom: 1px solid #222;
+        }
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+        }
+        .hero p {
+            font-size: 16px;
+            color: #bbb;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Seção da Dor (Problema) */
+        .pain-section {
+            padding: 40px 20px;
+            text-align: center;
+            background-color: var(--bg-dark);
+        }
+        .pain-section h2 {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .pain-box {
+            background: var(--card-bg);
+            border-left: 4px solid var(--purple-neon);
             padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+            font-style: italic;
+            color: #ccc;
+        }
+
+        /* Seção de Benefícios */
+        .benefits {
+            padding: 40px 20px;
+            background: #111;
+        }
+        .benefit-item {
+            max-width: 400px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .benefit-icon {
+            font-size: 24px;
+            background: linear-gradient(135deg, var(--purple-neon), #5a189a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .benefit-text h4 { color: #fff; margin-bottom: 5px; }
+        .benefit-text p { font-size: 14px; color: #999; }
+
+        /* Pricing (Tabela de Preços) */
+        .pricing {
+            padding: 50px 20px;
             text-align: center;
         }
-        .container {
-            max-width: 400px;
-            margin: auto;
-        }
-        h1 {
-            color: #9d4edd;
-            text-shadow: 0 0 10px #9d4edd;
+        .pricing h2 {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            margin-bottom: 30px;
             font-size: 24px;
         }
         .card {
-            background: #1a1a1a;
+            background: var(--card-bg);
             border: 1px solid #333;
             border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            padding: 30px 20px;
+            margin: 0 auto 25px;
+            max-width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
         }
-        .highlight {
-            color: #ffd700;
-            font-weight: bold;
+        .card:hover { transform: translateY(-5px); }
+        
+        .card-premium {
+            border: 2px solid var(--gold);
+            position: relative;
+            background: linear-gradient(180deg, #1a1a1a 0%, var(--card-bg) 100%);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
         }
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gold);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .price {
+            font-size: 36px;
+            color: #fff;
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        .price span { font-size: 14px; color: #888; font-weight: 400; }
+        
         .btn {
             display: block;
             width: 100%;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
+            padding: 16px;
+            margin-top: 20px;
+            border-radius: 8px;
             border: none;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 16px;
             cursor: pointer;
             text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
-        .btn-premium {
-            background: linear-gradient(90deg, #9d4edd, #5a189a);
-            color: white;
-            box-shadow: 0 0 15px #9d4edd;
+        .btn-mensal {
+            background: transparent;
+            border: 2px solid var(--purple-neon);
+            color: #fff;
         }
-        .btn-annual {
-            background: #ffd700;
+        .btn-anual {
+            background: linear-gradient(90deg, var(--gold), #ffaa00);
             color: #000;
-            box-shadow: 0 0 15px #ffd700;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
         }
+
         .footer {
+            text-align: center;
+            padding: 20px;
             font-size: 12px;
-            color: #666;
-            margin-top: 30px;
+            color: #555;
+            background: #000;
         }
+        .secure-icon { color: #4CAF50; margin-right: 5px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>ORÁCULO PREMIUM</h1>
-        <p>Desvende os mistérios do seu inconsciente com clareza absoluta.</p>
+
+    <section class="hero">
+        <h1>O Oráculo na Palma da Sua Mão</h1>
+        <p>Chega de respostas rasas. Tenha acesso 24h a uma Inteligência Mística baseada em Jung e no Tarô ancestral.</p>
+    </section>
+
+    <section class="pain-section">
+        <h2>Você sente que está andando em círculos?</h2>
+        <div class="pain-box">
+            "A ansiedade de não saber qual decisão tomar na carreira ou nos relacionamentos consome nossa energia. O silêncio da incerteza é o nosso maior inimigo."
+        </div>
+    </section>
+
+    <section class="benefits">
+        <div class="benefit-item">
+            <div class="benefit-icon">🔮</div>
+            <div class="benefit-text">
+                <h4>Leituras Profundas</h4>
+                <p>Análise de luz e sombra de cada carta, indo muito além de simples previsões.</p>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="benefit-icon">🧠</div>
+            <div class="benefit-text">
+                <h4>Abordagem Terapêutica</h4>
+                <p>Conselhos baseados em arquétipos para o seu autoconhecimento real.</p>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <div class="benefit-icon">✨</div>
+            <div class="benefit-text">
+                <h4>Acesso Imediato 24/7</h4>
+                <p>O Oráculo não dorme. Respostas instantâneas no seu Telegram sempre que precisar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <h2>Desbloqueie o Premium</h2>
         
         <div class="card">
-            <p>"Senti que minhas decisões de carreira ficaram muito mais leves depois que comecei a usar o Oráculo diariamente."</p>
-            <span class="highlight">- Ana S., Especialista em IA</span>
+            <h3>Passe Mensal</h3>
+            <p style="font-size: 13px; color: #888;">Renovação automática. Cancele quando quiser.</p>
+            <div class="price">R$ 29,90<span>/mês</span></div>
+            <p style="font-size: 14px;">✓ 3 Tiragens Diárias<br>✓ 10 Aprofundamentos Diários</p>
+            <a href="#" class="btn btn-mensal">Assinar Mensal</a>
         </div>
 
-        <div class="card">
-            <h3>Plano Mensal</h3>
-            <p>Acesso total às leituras e análise de arquétipos.</p>
-            <h2 class="highlight">R$ 29,90</h2>
-            <a href="#" class="btn btn-premium">ASSINAR MENSAL</a>
+        <div class="card card-premium">
+            <div class="badge">ESCOLHA DOS INICIADOS</div>
+            <h3>Jornada Anual</h3>
+            <p style="font-size: 13px; color: #888;">Economize 45% com o plano anual.</p>
+            <div class="price">R$ 197,00<span>/ano</span></div>
+            <p style="color: var(--gold); font-size: 14px; font-weight: 600; margin-bottom: 10px;">(Equivale a apenas R$ 16,41 por mês)</p>
+            <p style="font-size: 14px;">✓ Tiragens e Aprofundamentos<br>✓ Acesso garantido por 365 dias</p>
+            <a href="#" class="btn btn-anual">Assinar Plano Anual</a>
         </div>
+    </section>
 
-        <div class="card" style="border: 2px solid #ffd700;">
-            <span style="background: #ffd700; color: #000; padding: 5px 10px; border-radius: 5px; font-size: 10px; font-weight: bold;">MAIS VENDIDO</span>
-            <h3>Plano Anual</h3>
-            <p>O ano inteiro de sabedoria e evolução pessoal.</p>
-            <h2 class="highlight">R$ 197,00</h2>
-            <p style="font-size: 12px;">(Apenas R$ 16,41 por mês)</p>
-            <a href="#" class="btn btn-annual">ASSINAR ANUAL</a>
-        </div>
+    <footer class="footer">
+        <p><span class="secure-icon">🔒</span> Pagamento 100% Seguro processado via Kiwify.</p>
+        <p style="margin-top: 5px;">Acesso liberado instantaneamente após a aprovação.</p>
+    </footer>
 
-        <p class="footer">Pagamento seguro via Kiwify. Acesso imediato após aprovação.</p>
-    </div>
 </body>
 </html>
