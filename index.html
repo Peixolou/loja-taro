@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mestre de Tarô Premium</title>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <style>
         :root {
             --bg-dark: #0a0a0a;
@@ -32,7 +33,7 @@
             border-bottom: 1px solid #222;
         }
         .main-logo {
-            max-width: 150px; /* Ajuste o tamanho da sua logo aqui */
+            max-width: 150px; 
             margin-bottom: 20px;
             display: inline-block;
         }
@@ -294,7 +295,7 @@
             <p style="font-size: 13px; color: #888;">Renovação automática. Cancele quando quiser.</p>
             <div class="price">R$ 47,00<span>/mês</span></div>
             <p style="font-size: 14px;">✓ <strong>3 Tiragens Diárias</strong><br>✓ 10 Aprofundamentos Diários</p>
-            <a href="https://pay.kiwify.com.br/OYBOIXJ" class="btn btn-mensal">Assinar Mensal</a>
+            <a href="javascript:void(0);" onclick="abrirCheckout('https://pay.kiwify.com.br/OYBOIXJ')" class="btn btn-mensal">Assinar Mensal</a>
         </div>
 
         <div class="card card-premium">
@@ -304,7 +305,7 @@
             <div class="price">R$ 297,00<span>/ano</span></div>
             <p style="color: var(--gold); font-size: 14px; font-weight: 600; margin-bottom: 10px;">(Equivale a apenas R$ 24,75 por mês)</p>
             <p style="font-size: 14px;">✓ <strong>3 Tiragens Diárias</strong><br>✓ 10 Aprofundamentos Diários<br>✓ Acesso garantido por 365 dias</p>
-            <a href="https://pay.kiwify.com.br/8Zos4U2" class="btn btn-anual">Assinar Plano Anual</a>
+            <a href="javascript:void(0);" onclick="abrirCheckout('https://pay.kiwify.com.br/8Zos4U2')" class="btn btn-anual">Assinar Plano Anual</a>
         </div>
     </section>
 
@@ -319,5 +320,16 @@
         <p style="margin-top: 5px;">Acesso liberado instantaneamente após a aprovação.</p>
     </footer>
 
+    <script>
+        function abrirCheckout(url) {
+            // Se estiver rodando dentro do Telegram, avisa para abrir no navegador padrão do usuário
+            if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initData) {
+                Telegram.WebApp.openLink(url);
+            } else {
+                // Se estiver no navegador normal (PC), abre em uma nova aba
+                window.open(url, '_blank');
+            }
+        }
+    </script>
 </body>
 </html>
