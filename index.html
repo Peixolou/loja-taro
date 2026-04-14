@@ -24,7 +24,6 @@
             overflow-x: hidden;
         }
 
-        /* Hero Section (Topo) */
         .hero {
             padding: 40px 20px 30px;
             text-align: center;
@@ -58,175 +57,42 @@
             border: 1px solid #333;
         }
 
-        /* Seção da Dor (Problema) */
-        .pain-section {
-            padding: 40px 20px;
-            text-align: center;
-            background-color: var(--bg-dark);
-        }
-        .pain-section h2 {
-            color: #fff;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        .pain-box {
-            background: var(--card-bg);
-            border-left: 4px solid var(--purple-neon);
-            padding: 20px;
-            border-radius: 8px;
-            text-align: left;
-            max-width: 400px;
-            margin: 0 auto;
-            font-style: italic;
-            color: #ccc;
-        }
+        .pain-section { padding: 40px 20px; text-align: center; background-color: var(--bg-dark); }
+        .pain-section h2 { color: #fff; font-size: 20px; margin-bottom: 20px; }
+        .pain-box { background: var(--card-bg); border-left: 4px solid var(--purple-neon); padding: 20px; border-radius: 8px; text-align: left; max-width: 400px; margin: 0 auto; font-style: italic; color: #ccc; }
 
-        /* Prova Social (Depoimentos) */
-        .testimonials {
-            padding: 40px 20px;
-            background: #0f0f0f;
-            text-align: center;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
-        }
-        .testimonials h2 {
-            font-family: 'Cinzel', serif;
-            color: var(--purple-neon);
-            margin-bottom: 25px;
-            font-size: 22px;
-        }
-        .review-card {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            border-radius: 12px;
-            padding: 20px;
-            max-width: 350px;
-            margin: 0 auto 15px;
-            text-align: left;
-        }
+        .testimonials { padding: 40px 20px; background: #0f0f0f; text-align: center; border-top: 1px solid #222; border-bottom: 1px solid #222; }
+        .testimonials h2 { font-family: 'Cinzel', serif; color: var(--purple-neon); margin-bottom: 25px; font-size: 22px; }
+        .review-card { background: #1a1a1a; border: 1px solid #333; border-radius: 12px; padding: 20px; max-width: 350px; margin: 0 auto 15px; text-align: left; }
         .stars { color: var(--gold); font-size: 18px; margin-bottom: 10px; }
         .review-text { font-size: 14px; color: #ddd; margin-bottom: 10px; font-style: italic; }
         .review-author { font-size: 12px; color: #888; font-weight: 600; text-transform: uppercase; }
 
-        /* Seção de Benefícios */
-        .benefits {
-            padding: 40px 20px;
-            background: #111;
-        }
-        .benefit-item {
-            max-width: 400px;
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        .benefit-icon {
-            font-size: 24px;
-            background: linear-gradient(135deg, var(--purple-neon), #5a189a);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .benefits { padding: 40px 20px; background: #111; }
+        .benefit-item { max-width: 400px; margin: 0 auto 20px; display: flex; align-items: flex-start; gap: 15px; }
+        .benefit-icon { font-size: 24px; background: linear-gradient(135deg, var(--purple-neon), #5a189a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .benefit-text h4 { color: #fff; margin-bottom: 5px; }
         .benefit-text p { font-size: 14px; color: #999; }
 
-        /* Pricing (Tabela de Preços) */
-        .pricing {
-            padding: 50px 20px 30px;
-            text-align: center;
-        }
-        .pricing h2 {
-            font-family: 'Cinzel', serif;
-            color: var(--gold);
-            margin-bottom: 30px;
-            font-size: 26px;
-        }
-        .card {
-            background: var(--card-bg);
-            border: 1px solid #333;
-            border-radius: 15px;
-            padding: 30px 20px;
-            margin: 0 auto 25px;
-            max-width: 350px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            transition: transform 0.3s ease;
-        }
+        .pricing { padding: 50px 20px 30px; text-align: center; }
+        .pricing h2 { font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 30px; font-size: 26px; }
+        .card { background: var(--card-bg); border: 1px solid #333; border-radius: 15px; padding: 30px 20px; margin: 0 auto 25px; max-width: 350px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform 0.3s ease; }
         .card:hover { transform: translateY(-5px); }
-        
-        .card-premium {
-            border: 2px solid var(--gold);
-            position: relative;
-            background: linear-gradient(180deg, #1a1a1a 0%, var(--card-bg) 100%);
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
-        }
-        .badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gold);
-            color: #000;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            white-space: nowrap;
-        }
-        .price {
-            font-size: 36px;
-            color: #fff;
-            font-weight: 700;
-            margin: 15px 0;
-        }
+        .card-premium { border: 2px solid var(--gold); position: relative; background: linear-gradient(180deg, #1a1a1a 0%, var(--card-bg) 100%); box-shadow: 0 0 20px rgba(255, 215, 0, 0.15); }
+        .badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #000; padding: 5px 15px; border-radius: 20px; font-size: 11px; font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+        .price { font-size: 36px; color: #fff; font-weight: 700; margin: 15px 0; }
         .price span { font-size: 14px; color: #888; font-weight: 400; }
         
-        .btn {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            margin-top: 20px;
-            border-radius: 8px;
-            border: none;
-            font-weight: 700;
-            font-size: 16px;
-            cursor: pointer;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-        .btn-mensal {
-            background: transparent;
-            border: 2px solid var(--purple-neon);
-            color: #fff;
-        }
-        .btn-anual {
-            background: linear-gradient(90deg, var(--gold), #ffaa00);
-            color: #000;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-        }
+        .btn { display: block; width: 100%; padding: 16px; margin-top: 20px; border-radius: 8px; border: none; font-weight: 700; font-size: 16px; cursor: pointer; text-decoration: none; text-transform: uppercase; letter-spacing: 1px; text-align: center; }
+        .btn-mensal { background: transparent; border: 2px solid var(--purple-neon); color: #fff; }
+        .btn-anual { background: linear-gradient(90deg, var(--gold), #ffaa00); color: #000; box-shadow: 0 0 20px rgba(255, 215, 0, 0.4); }
 
-        /* Garantia */
-        .guarantee {
-            max-width: 350px;
-            margin: 0 auto 40px;
-            padding: 20px;
-            border: 1px dashed var(--gold);
-            border-radius: 10px;
-            text-align: center;
-            background: rgba(255, 215, 0, 0.05);
-        }
+        .guarantee { max-width: 350px; margin: 0 auto 40px; padding: 20px; border: 1px dashed var(--gold); border-radius: 10px; text-align: center; background: rgba(255, 215, 0, 0.05); }
         .guarantee-icon { font-size: 30px; margin-bottom: 10px; }
         .guarantee h4 { color: var(--gold); margin-bottom: 5px; }
         .guarantee p { font-size: 13px; color: #aaa; }
 
-        .footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 12px;
-            color: #555;
-            background: #000;
-        }
+        .footer { text-align: center; padding: 20px; font-size: 12px; color: #555; background: #000; }
         .secure-icon { color: #4CAF50; margin-right: 5px; }
     </style>
 </head>
@@ -319,5 +185,23 @@
         <p style="margin-top: 5px;">Acesso liberado instantaneamente após a aprovação.</p>
     </footer>
 
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let chatId = "desconhecido";
+            // Pega o ID do usuário direto do Telegram
+            if (window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initDataUnsafe && window.Telegram.WebApp.initDataUnsafe.user) {
+                chatId = window.Telegram.WebApp.initDataUnsafe.user.id;
+            }
+            
+            // Procura todos os botões de venda e adiciona o ID como rastro (?src=ID)
+            document.querySelectorAll('a.btn').forEach(function(btn) {
+                let originalHref = btn.getAttribute('href');
+                if(originalHref.includes('pay.kiwify.com.br')) {
+                    btn.setAttribute('href', originalHref + '?src=' + chatId);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
